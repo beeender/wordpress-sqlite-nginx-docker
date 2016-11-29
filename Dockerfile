@@ -3,7 +3,7 @@ MAINTAINER Zeno Zeng <zenoofzeng@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV DOCUMENT_ROOT /usr/share/nginx/html
+ENV DOCUMENT_ROOT /usr/share/nginx/html/blog
 
 #Install nginx php-fpm php-pdo unzip curl
 RUN apt-get update 
