@@ -41,5 +41,12 @@ server {
     location ~ /\.ht {
         deny  all;
     }
+
+    location ~ .(gif|png|jpeg|jpg|svg)$ {
+        valid_referers none blocked ~.google. ~.bing. ~.yahoo. ~.baidu. ~.sogo. ikeriker.org *.ikeriker.org;
+        if ($invalid_referer) {
+            return   403;
+        }
+    }
 }
 
